@@ -76,7 +76,7 @@ while (true) {
             }
             break;
 
-        case '2': // Return a book
+        case '2': 
             $name = readline("Enter your name: ");
             $member = null;
             foreach ($members as $m) {
