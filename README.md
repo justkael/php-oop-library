@@ -10,7 +10,7 @@ Zend Engine v4.4.16, Copyright (c) Zend Technologies
 
 4: execute php index.php
 
-note: there are only 2 user there. when enter name "ana" for student and "John" for Regular
+note: there are only 2 user there. on the enter your name just enter "ana" for student and "John" for Regular
 
 ```bash
 ```
