@@ -10,16 +10,15 @@ class Book{
         $this->author = $author;
     }
 
-    public function getTitle(): string {
-        return $this->title;
-    }
-
-    public function getAuthor(): string {
-        return $this->author;
+    //magic method
+    public function __get($property){
+        if (property_exists($this,$property)){
+            return $this->$property;
+        }
     }
 
     public function getInfo(): string {
-        return "Book: {$this->getTitle()} by {$this->getAuthor()}";
+        return "Book: {$this->__get('title')} by {$this->__get('author')}";
     }
 }
 

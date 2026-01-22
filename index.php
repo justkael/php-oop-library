@@ -15,7 +15,7 @@ $book1 = new Book("Harry Potter", "JK Rowling");
 $student = new StudentMember("Ana", 101);
 $student2 = new RegularMember("John", 102);
 
-echo $book1->getInfo();
+echo $book1->getinfo();
 echo "\n";
 echo $student->getInfo();
 echo "\n";

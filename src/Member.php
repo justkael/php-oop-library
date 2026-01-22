@@ -10,18 +10,18 @@ abstract class Member{
         $this->memberId=$memberId;
     }
 
-    public function getName(){
-        return $this->name;
+    //magic method
+    public function __get($property){
+        if (property_exists($this,$property)){
+            return $this->$property;
+        }
     }
 
-    public function getMemberId(){
-        return $this->memberId;
-    }
 
     abstract public function getType();
 
     public function getInfo(){
-        return "Member: {$this->getName()} ID: ({$this->getMemberId()}) Member Type:[{$this->getType()}]";
+        return "Member: {$this->__get('name')} ID: ({$this->__get('memberId')}) Member Type:[{$this->getType()}]";
     }
 
 }
