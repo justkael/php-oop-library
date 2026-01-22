@@ -5,9 +5,8 @@ abstract class Member{
     private $name;
     private $memberId;
     
-    public function __construct($name,$memberId){
+    public function __construct($name){
         $this->name=$name;
-        $this->memberId=$memberId;
     }
 
     //magic method
@@ -19,10 +18,6 @@ abstract class Member{
 
 
     abstract public function getType();
-
-    public function getInfo(){
-        return "Member: {$this->__get('name')} ID: ({$this->__get('memberId')}) Member Type:[{$this->getType()}]";
-    }
 
 }
 

@@ -7,11 +7,11 @@ class StudentMember extends Member implements Borrowable{
     return "Student";
     }
 
-    public function BorrowBook(){
-
+    public function BorrowBook(Book $book){
+        return "Student  {$this->__get('name')} borrowed {$book->__get('title')}";
     }
     
-    public function ReturnBook(){
-        
+    public function ReturnBook(Book $book){
+        return "Student  {$this->__get('name')} returned {$book->__get('title')}";
     }
 }

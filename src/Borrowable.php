@@ -4,6 +4,6 @@ declare(strict_types=1);
 
 
 interface Borrowable{
-    public function BorrowBook();
-    public function ReturnBook();
+    public function BorrowBook(Book $book);
+    public function ReturnBook(Book $book);
 }
