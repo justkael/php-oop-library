@@ -15,4 +15,3 @@ public function getType(){
         return "Regular  {$this->__get('name')} returned {$book->__get('title')}";
     }
 }
-

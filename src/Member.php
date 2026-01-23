@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-abstract class Member{
+abstract class Member implements Borrowable{
     private $name;
     private $memberId;
     
@@ -18,9 +18,7 @@ abstract class Member{
 
 
     abstract public function getType();
-
+    abstract public function BorrowBook(Book $book);
+    abstract public function ReturnBook(Book $book);
 }
-
-
-
 

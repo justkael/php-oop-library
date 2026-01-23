@@ -21,4 +21,3 @@ class Book{
         return "Book: {$this->__get('title')} by {$this->__get('author')}";
     }
 }
-

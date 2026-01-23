@@ -12,7 +12,7 @@ class Library
         $this->availableBooks[] = $book;
     }
 
-    public function borrowBook(Borrowable $member, Book $book): string
+    public function borrowBook(Member $member, Book $book): string
 {
 
     $currentLoans = $this->countActiveLoans($member);
@@ -35,7 +35,7 @@ class Library
 }
 
 
-    public function returnBook(Borrowable $member, Book $book): string
+    public function returnBook(Member $member, Book $book): string
     {
         foreach ($this->activeLoans as $index => $loan) {
             if (
@@ -54,7 +54,7 @@ class Library
         throw new Exception("No active loan found for this book and member.");
     }
 
-    private function countActiveLoans(Borrowable $member){
+    private function countActiveLoans(Member $member){
         $count = 0;
 
         foreach($this->activeLoans as $loan){
